@@ -1,0 +1,87 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #be2e2e;
+    transition: 0.3s;
+}
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.chat-section {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.chat-box {
+    height: 400px;
+    background: white;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.input-area {
+    margin-top: 10px;
+}
+
+.features {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+}
+
+.card input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.card button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.emergency button {
+    background: red;
+}
+body.dark-mode {
+    background-color: #121212 !important;
+    color: white;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: white;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Health Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<header>
+    <h1>🤖 AI Health Assistant</h1>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header>
+
+<div class="container">
+
+    <!-- Chat Section -->
+    <div class="chat-section">
+        <div id="chatBox" class="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Describe your symptoms...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+
+        <!-- BMI -->
+        <div class="card">
+            <h3>BMI Calculator</h3>
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (cm)">
+            <button onclick="calculateBMI()">Calculate</button>
+            <p id="bmiResult"></p>
+        </div>
+
+        <!-- Water Reminder -->
+        <div class="card">
+            <h3>Water Reminder</h3>
+            <button onclick="startWaterReminder()">Start Reminder</button>
+            <p id="waterStatus"></p>
+        </div>
+
+        <!-- Medicine Reminder -->
+        <div class="card">
+            <h3>Medicine Reminder</h3>
+            <input type="time" id="medTime">
+            <button onclick="setMedicineReminder()">Set Reminder</button>
+            <p id="medStatus"></p>
+        </div>
+
+        <!-- Appointment -->
+        <div class="card">
+            <h3>Book Appointment</h3>
+            <input type="text" placeholder="Doctor Name">
+            <input type="date">
+            <button onclick="bookAppointment()">Book</button>
+        </div>
+
+        <!-- Nearby Hospital -->
+        <div class="card">
+            <h3>Nearby Hospitals</h3>
+            <button onclick="findHospital()">Find Hospitals</button>
+        </div>
+
+        <!-- Emergency -->
+        <div class="card emergency">
+            <h3>Emergency</h3>
+            <button onclick="callEmergency()">🚨 Call Ambulance</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
