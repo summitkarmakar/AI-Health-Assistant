@@ -1,22 +1,42 @@
+/* General Body */
 body {
     font-family: Arial;
     margin: 0;
-    background-color: #be2e2e;
-    transition: 0.3s;
+    background-color: #818283;
 }
+
+/* Header */
 header {
     background: #2c3e50;
     color: white;
     padding: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+/* Navbar Buttons */
+.nav-buttons button {
+    margin: 0 5px;
+    padding: 6px 10px;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-buttons button:hover {
+    background: #2980b9;
+}
+
+/* Layout */
 .container {
     display: flex;
     padding: 20px;
 }
 
+/* Chat Section */
 .chat-section {
     width: 50%;
     margin-right: 20px;
@@ -34,54 +54,115 @@ header {
     margin-top: 10px;
 }
 
-.features {
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px gray;
-}
-
-.card input {
-    width: 100%;
-    margin: 5px 0;
-    padding: 5px;
-}
-
-.card button {
-    width: 100%;
+.input-area input {
+    width: 75%;
     padding: 8px;
-    margin-top: 5px;
-    background: #3498db;
-    color: white;
-    border: none;
+}
+
+.input-area button {
+    padding: 8px 12px;
     cursor: pointer;
 }
 
+/* ================= FEATURES SECTION ================= */
+
+.features {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cards hidden by default */
+.features .card {
+    display: none;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.features .card:hover {
+    transform: scale(1.02);
+}
+
+/* Inputs */
+.features .card input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+.features .card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.features .card button:hover {
+    background: #2980b9;
+}
+
+/* Emergency */
 .emergency button {
-    background: red;
+    background: rgb(30, 181, 246);
 }
+
+.emergency button:hover {
+    background: rgb(6, 51, 114);
+}
+
+/* ================= DARK MODE ================= */
+
 body.dark-mode {
-    background-color: #121212 !important;
+    background-color: #121212;
     color: white;
 }
 
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: white;
-}
-
+/* Header Dark */
 body.dark-mode header {
     background-color: #1f1f1f;
 }
 
-body.dark-mode button {
+/* Chat Dark */
+body.dark-mode .chat-box {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Cards Dark */
+body.dark-mode .features .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Inputs Dark */
+body.dark-mode input {
     background-color: #333;
     color: white;
+    border: 1px solid #555;
+}
+
+/* Buttons Dark */
+body.dark-mode button {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
 }

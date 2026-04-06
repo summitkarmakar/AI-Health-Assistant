@@ -58,3 +58,31 @@ function callEmergency() {
     alert("Calling Ambulance 🚑");
 }
 
+function showSection(sectionId) {
+
+    // sab cards select karo
+    let sections = document.querySelectorAll(".features .card");
+
+    // sab hide karo
+    sections.forEach(sec => sec.style.display = "none");
+
+    // selected section show karo (safe check)
+    let selected = document.getElementById(sectionId);
+    if (selected) {
+        selected.style.display = "block";
+    }
+
+    // active button highlight (optional 🔥)
+    let buttons = document.querySelectorAll(".nav-buttons button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    let activeBtn = document.querySelector(`.nav-buttons button[onclick="showSection('${sectionId}')"]`);
+    if (activeBtn) {
+        activeBtn.classList.add("active");
+    }
+}
+
+// default load
+window.onload = function() {
+    showSection('bmi'); // default open
+}
